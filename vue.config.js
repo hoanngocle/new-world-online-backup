@@ -1,8 +1,17 @@
+const fs = require('fs');
 const path = require('path');
 
 module.exports = {
   publicPath: '/',
   lintOnSave: false,
+  devServer: {
+    host: process.env.WEB_HOST || 'http://localhost', // default: localhost
+    port: process.env.WEB_HTTPS ? process.env.WEB_PORT_HTTPS : process.env.WEB_PORT_HTTP,
+    https: {
+      key: fs.readFileSync('./.cert/newworld.online+3-key.pem'),
+      cert: fs.readFileSync('./.cert/newworld.online+3.pem'),
+    },
+  },
   css: {
     loaderOptions: {
       sass: {

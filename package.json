@@ -1,6 +1,6 @@
 {
-  "name": "vuexy-vuejs-react-html-laravel-admin-dashboard-template",
-  "version": "6.4.0",
+  "name": "new-world-online-project",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
